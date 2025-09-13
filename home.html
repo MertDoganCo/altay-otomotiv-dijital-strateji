@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altay Otomotiv & More Dijital - Dijital Dönüşüm Stratejisi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;7.00;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; }
+        .gradient-text { background: linear-gradient(90deg, #2563eb, #3b82f6); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card { 
+            background-color: white; 
+            border-radius: 0.75rem; 
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); 
+            padding: 1.5rem; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); 
+        }
+        .page-card {
+            border-left: 4px solid;
+        }
+        .page-card-blue { border-image: linear-gradient(135deg, #3b82f6, #60a5fa) 1; }
+        .page-card-green { border-image: linear-gradient(135deg, #10b981, #34d399) 1; }
+        .page-card-purple { border-image: linear-gradient(135deg, #8b5cf6, #a78bfa) 1; }
+        .page-card-pink { border-image: linear-gradient(135deg, #ec4899, #f472b6) 1; }
+        .page-card-indigo { border-image: linear-gradient(135deg, #6366f1, #818cf8) 1; }
+
+        .card-content { flex-grow: 1; }
+
+    </style>
+</head>
+<body class="text-slate-800">
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl font-bold text-slate-800">ALTAY</span>
+                    <span class="text-2xl font-light text-slate-400">+</span>
+                    <span class="text-2xl font-bold gradient-text">MORE</span>
+                </div>
+                <div class="text-sm text-slate-600">
+                    <a href="index.html" class="font-semibold hover:text-blue-600 transition-colors">Ana Stratejiye Dön →</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <section class="text-center py-16 md:py-24">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
+                <span class="gradient-text">Dijital Dönüşüm Stratejisi</span><br>
+                Sunum Portföyü
+            </h1>
+            <p class="text-base md:text-lg text-slate-600 max-w-4xl mx-auto mb-8">
+                Altay Otomotiv'in dijital dönüşüm yolculuğu için hazırlanmış kapsamlı strateji sunum koleksiyonu. 
+                Her sayfa, dijital pazarlama alanında farklı bir uzmanlık konusunu detaylı şekilde ele alır.
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="index.html" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
+                    Ana Strateji Sunumu
+                </a>
+                <a href="teksayfa.html" class="bg-slate-600 hover:bg-slate-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
+                    Tek Sayfa Özet
+                </a>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-12">Sunum Sayfaları</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <a href="index.html" class="card page-card page-card-blue group">
+                    <div class="card-content">
+                        <div class="flex items-center mb-3">
+                            <div class="text-3xl mr-3">🏠</div>
+                            <h3 class="text-xl font-bold group-hover:text-blue-600 transition-colors">Ana Strateji</h3>
+                        </div>
+                        <p class="text-slate-600 text-sm">
+                            Pazar analizi, SWOT ve 12 aylık dijital liderlik yol haritası. 
+                            Projenin genel stratejik çerçevesi ve hedefleri.
+                        </p>
+                    </div>
+                    <div class="mt-4 text-blue-600 text-sm font-medium">
+                        Detayları Görüntüle →
+                    </div>
+                </a>
+
+                <a href="website.html" class="card page-card page-card-blue group">
+                     <div class="card-content">
+                        <div class="flex items-center mb-3">
+                            <div class="text-3xl mr-3">🌐</div>
+                            <h3 class="text-xl font-bold group-hover:text-blue-600 transition-colors">Web Sitesi</h3>
+                        </div>
+                        <p class="text-slate-600 text-sm">
+                            Kurumsal web sitesi yenileme stratejisi. Modern, mobil uyumlu 
+                            ve SEO dostu altyapının kritik önemi ve kazanımları.
+                        </p>
+                    </div>
+                    <div class="mt-4 text-blue-600 text-sm font-medium">
+                        Detayları Görüntüle →
+                    </div>
+                </a>
+
+                <a href="seo.html" class="card page-card page-card-green group">
+                     <div class="card-content">
+                        <div class="flex items-center mb-3">
+                            <div class="text-3xl mr-3">🔍</div>
+                            <h3 class="text-xl font-bold group-hover:text-green-600 transition-colors">SEO Stratejisi</h3>
+                        </div>
+                        <p class="text-slate-600 text-sm">
+                            Arama motoru optimizasyonu ile organik büyüme. 
+                            Sürdürülebilir trafik ve yüksek dönüşüm stratejileri.
+                        </p>
+                    </div>
+                    <div class="mt-4 text-green-600 text-sm font-medium">
+                        Detayları Görüntüle →
+                    </div>
+                </a>
+
+                <a href="sosyalmedya.html" class="card page-card page-card-purple group">
+                     <div class="card-content">
+                        <div class="flex items-center mb-3">
+                            <div class="text-3xl mr-3">📱</div>
+                            <h3 class="text-xl font-bold group-hover:text-purple-600 transition-colors">Sosyal Medya</h3>
+                        </div>
+                        <p class="text-slate-600 text-sm">
+                            LinkedIn ve Instagram'da marka imajı ve etkileşim yaratma. B2B odaklı sosyal medya 
+                            yönetimi ve influencer iş birlikleri.
+                        </p>
+                    </div>
+                    <div class="mt-4 text-purple-600 text-sm font-medium">
+                        Detayları Görüntüle →
+                    </div>
+                </a>
+
+                <a href="produksiyon.html" class="card page-card page-card-pink group">
+                     <div class="card-content">
+                        <div class="flex items-center mb-3">
+                            <div class="text-3xl mr-3">🎬</div>
+                            <h3 class="text-xl font-bold group-hover:text-pink-600 transition-colors">Prodüksiyon</h3>
+                        </div>
+                        <p class="text-slate-600 text-sm">
+                            Video, fotoğraf, 3D animasyon ve grafik tasarım hizmetleri. 
+                            Marka hikayenizi görselleştiren yaratıcı içerik çözümleri.
+                        </p>
+                    </div>
+                    <div class="mt-4 text-pink-600 text-sm font-medium">
+                        Detayları Görüntüle →
+                    </div>
+                </a>
+
+                <a href="referanslar.html" class="card page-card page-card-indigo group">
+                     <div class="card-content">
+                        <div class="flex items-center mb-3">
+                            <div class="text-3xl mr-3">🏆</div>
+                            <h3 class="text-xl font-bold group-hover:text-indigo-600 transition-colors">Referanslarımız</h3>
+                        </div>
+                        <p class="text-slate-600 text-sm">
+                            More Dijital'in başarılı projeleri ve mutlu müşterileri. 
+                            500+ proje ile kanıtlanmış deneyim ve sektörel başarılar.
+                        </p>
+                    </div>
+                    <div class="mt-4 text-indigo-600 text-sm font-medium">
+                        Detayları Görüntüle →
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-xl p-8 text-center mt-24">
+            <h2 class="text-2xl font-bold mb-4">Proje Hakkında</h2>
+            <p class="text-slate-600 max-w-3xl mx-auto mb-6">
+                Bu sunum portföyü, Altay Otomotiv'in dijital dönüşüm ihtiyaçlarını karşılamak için 
+                More Dijital Ajans tarafından hazırlanmıştır. Her sayfa, modern web teknolojileri 
+                kullanılarak responsive ve kullanıcı dostu bir deneyim sunacak şekilde tasarlanmıştır.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+                <div class="text-center">
+                    <div class="text-3xl mb-2">⚡</div>
+                    <h3 class="font-semibold mb-1">Hızlı ve Modern</h3>
+                    <p class="text-sm text-slate-600">TailwindCSS ile optimize edilmiş performans</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl mb-2">📱</div>
+                    <h3 class="font-semibold mb-1">Mobil Uyumlu</h3>
+                    <p class="text-sm text-slate-600">Her cihazda mükemmel görünüm</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl mb-2">🎯</div>
+                    <h3 class="font-semibold mb-1">Stratejik İçerik</h3>
+                    <p class="text-sm text-slate-600">Veriye dayalı stratejik yaklaşım</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-10 text-center">
+            <p class="text-2xl font-bold">Dijital Dönüşüm Yolculuğuna Başlamaya Hazır Mısınız?</p>
+            <p class="mt-2 mb-6 text-slate-400">Altay Otomotiv'in dijital geleceğini birlikte şekillendirelim.</p>
+            <a href="https://moredijital.com/" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-colors duration-300">
+                More Dijital ile İletişime Geçin
+            </a>
+            <p class="text-xs text-slate-500 mt-8">&copy; 2025 More Dijital Ajans & Mert Doğan. Bu sunum Altay Otomotiv için özel olarak hazırlanmıştır.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

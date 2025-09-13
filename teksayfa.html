@@ -1,0 +1,376 @@
+<!-- Chosen Palette: Corporate Trust (shades of blue and gray for a professional, trustworthy feel) -->
+<!-- Application Structure Plan: A single-page narrative infographic designed to guide the Altay board through a logical argument. It starts with the current problem (the digital gap vs. competitors), diagnoses it (SWOT), presents a clear 3-part solution (Web, SEO, Ads) backed by global and local case studies, details a phased 12-month action plan (Roadmap), and concludes by positioning More Dijital as the ideal partner. This linear storytelling structure is chosen to be persuasive and easy to follow, building a compelling case for investment step-by-step. -->
+<!-- Visualization & Content Choices: 1. Competitor Digital Score (Bar Chart): Goal: Compare. Shows Altay's digital weakness starkly against key rivals. Chart.js/Canvas. 2. Competitor Web Traffic (Doughnut Chart): Goal: Compare. Visualizes the massive missed opportunity in online market share, using updated data reflecting market leaders. Chart.js/Canvas. 3. SEO Growth (Line Chart): Goal: Change. Demonstrates the long-term, compounding value of SEO investment over 12 months. Chart.js/Canvas. 4. Work Process (HTML/CSS Diagram): Goal: Organize. Shows More Dijital's structured approach, building trust. Uses styled divs and flexbox. 5. SWOT/Roadmap (Styled HTML): Goal: Organize/Inform. Uses card layouts and a vertical timeline for clarity and readability, now populated with more detailed insights from the new source text. -->
+<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altay Otomotiv & More Dijital | Dijital Dönüşüm Stratejisi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; }
+        .gradient-text { background: linear-gradient(90deg, #2563eb, #3b82f6); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card { background-color: white; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+        .chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 320px; max-height: 400px; }
+        @media (min-width: 768px) { .chart-container { height: 350px; } }
+        .kpi-card { background: #ffffff; border-left: 5px solid #3b82f6; }
+        .timeline-item::before { content: ''; position: absolute; left: -31px; top: 0px; width: 22px; height: 22px; border-radius: 50%; background-color: #3b82f6; border: 4px solid #dbeafe; }
+        .nav-link { transition: color 0.3s; }
+        .nav-link:hover { color: #2563eb; }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl font-bold text-slate-800">ALTAY</span>
+                    <span class="text-2xl font-light text-slate-400">+</span>
+                    <span class="text-2xl font-bold gradient-text">MORE</span>
+                </div>
+                <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-600">
+                    <a href="home.html" class="nav-link">← Çoklu Sayfaya Dön</a>
+                    <a href="#market-analysis" class="nav-link">Pazar Analizi</a>
+                    <a href="#roadmap" class="nav-link">Yol Haritası</a>
+                    <a href="#why-us" class="nav-link">Neden Biz?</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        
+        <section class="text-center py-16 md:py-24">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Pazardaki Gücünüzü <br><span class="gradient-text">Dijitalde Taçlandırma Zamanı</span></h1>
+            <p class="text-base md:text-lg text-slate-600 max-w-4xl mx-auto">1982'den beri sektör lideri olan Altay Otomotiv, köklü geçmişi ve operasyonel mükemmelliği ile zirvede. Dijital çağda liderlik ise, sadece fiziki dünyada değil, dijital arenada da mutlak hakimiyet gerektirir. Bu strateji sunumu, pazar gücünüzü dijitalde perçinleyerek marka bilinirliğinizi rakipsiz bir seviyeye taşımanın veriye dayalı yol haritasıdır.</p>
+        </section>
+
+        <section id="market-analysis" class="mb-16 md:mb-24 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-3">Dijital Pazar Analizi: Artık Bir Tercih Değil, Zorunluluk</h2>
+                <p class="text-slate-600 max-w-3xl mx-auto">Otomotiv yedek parça sektörü hızla dijitalleşiyor. Artık B2B alıcılarının %91'i satın alma için online kanalları tercih ediyor ve %63'ü doğrudan şirket web sitelerini inceliyor. Rakipleriniz Martaş ve Inter Cars gibi devler, milyonlarca dolarlık yatırımlarla dijital altyapılarını kurarken, dijitalde geride kalmak pazar payı kaybetmek anlamına geliyor.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                <div class="card">
+                    <h3 class="font-bold text-xl mb-2 text-center">Rakiplerin Dijital Varlık Skoru</h3>
+                    <p class="text-sm text-slate-500 text-center mb-4">Web sitesi otoritesi, B2B portal yetkinliği, sosyal medya ve SEO performansını birleştiren tahmini skor.</p>
+                    <div class="chart-container">
+                        <canvas id="competitorChart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="font-bold text-xl mb-2 text-center">Tahmini Aylık Dijital Erişim Payı</h3>
+                    <p class="text-sm text-slate-500 text-center mb-4">Rakipleriniz, dijital kanallardan her ay yüz binlerce potansiyel iş ortağına ulaşıyor. Bu, masada bırakılan devasa bir fırsattır.</p>
+                    <div class="chart-container">
+                        <canvas id="trafficChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="swot" class="mb-16 md:mb-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-3">SWOT Analizi: Dijital Mercekten Bakış</h2>
+                <p class="text-slate-600 max-w-3xl mx-auto">Şirketinizin köklü gücü, dijital dönüşüm için mükemmel bir temel oluşturuyor. Zayıf yönleri birer fırsata çevirerek tehditleri bertaraf edebiliriz.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card border-t-4 border-green-500">
+                    <h3 class="text-xl font-bold text-green-600 mb-3">Güçlü Yönler</h3>
+                    <ul class="list-disc list-inside space-y-2 text-slate-700 text-sm">
+                        <li><b>Sektörel Tecrübe:</b> 40 yılı aşkın güvenilirlik ve sadık müşteri tabanı.</li>
+                        <li><b>Geniş Ürün Yelpazesi:</b> 270.000+ ürün ile "her arananı bulma" gücü.</li>
+                        <li><b>Kapsamlı Dağıtım Ağı:</b> Türkiye geneline yayılmış depolarla hızlı teslimat kabiliyeti.</li>
+                        <li><b>MAHER Özel Markası:</b> Kalite kontrolü ve rekabette farklılaşma imkanı.</li>
+                        <li><b>Çevik Karar Alma:</b> Rakiplere göre daha esnek ve hızlı kampanya onayı potansiyeli.</li>
+                    </ul>
+                </div>
+                <div class="card border-t-4 border-red-500">
+                    <h3 class="text-xl font-bold text-red-600 mb-3">Zayıf Yönler</h3>
+                    <ul class="list-disc list-inside space-y-2 text-slate-700 text-sm">
+                         <li><b>Zayıf Dijital Altyapı:</b> Eski, yavaş ve mobil uyumsuz web sitesi (Ziyaretçilerin %88.5'i yavaş siteleri terk ediyor).</li>
+                        <li><b>Dijital Pazarlama Deneyimsizliği:</b> Kurum içinde SEO, içerik ve reklam kültürü eksikliği.</li>
+                        <li><b>Düşük Marka Bilinirliği:</b> Dijitalde rakiplerin gölgesinde kalma, Google'da düşük görünürlük.</li>
+                        <li><b>Çok Dilli İçerik Eksikliği:</b> Global pazarlara açılmayı engelleyen sınırlı yabancı dil içeriği.</li>
+                        <li><b>Entegre Olmayan B2B Sistem:</b> Kullanıcı deneyiminde kopukluk yaratan, modern olmayan bayi portalı.</li>
+                    </ul>
+                </div>
+                <div class="card border-t-4 border-blue-500">
+                    <h3 class="text-xl font-bold text-blue-600 mb-3">Fırsatlar</h3>
+                    <ul class="list-disc list-inside space-y-2 text-slate-700 text-sm">
+                        <li><b>Artan Online Arama:</b> B2B alıcılarının %66'sı tedarikçilerini internette arıyor; SEO ile bu kitleye ulaşma.</li>
+                        <li><b>Yurt Dışı Pazarlara Açılım:</b> Dijital reklamlarla coğrafi sınırları aşarak yeni ihracat müşterileri bulma.</li>
+                        <li><b>İçerikle Otorite Olma:</b> Rakiplerin zayıf olduğu eğitici video ve blog içerikleriyle sektörün bilgi kaynağı olma.</li>
+                        <li><b>Müşteri Eğitimi ve Bağlılığı:</b> "Doğru parça seçimi" gibi rehberlerle müşteriye değer katıp sadakat oluşturma.</li>
+                        <li><b>Ölçülebilir Yatırım Getirisi (ROI):</b> SEO'nun 5-8 kat getiri potansiyeli ve dijital reklamların somut verileri ile yönetimi ikna etme.</li>
+                    </ul>
+                </div>
+                <div class="card border-t-4 border-amber-500">
+                    <h3 class="text-xl font-bold text-amber-600 mb-3">Tehditler</h3>
+                    <ul class="list-disc list-inside space-y-2 text-slate-700 text-sm">
+                         <li><b>Agresif Dijital Rekabet:</b> Martaş ve Dinamik gibi rakiplerin yüksek dijital reklam bütçeleri.</li>
+                        <li><b>Hızla Değişen Trendler:</b> Dijital dünyaya adapte olamama ve yatırımın güncelliğini yitirme riski.</li>
+                        <li><b>Yeni Nesil Alıcılar:</b> Dijitalde var olmayan markaları tercih etmeyen yeni kuşak satın almacıları kaybetme riski.</li>
+                        <li><b>Organizasyonel Direnç:</b> Geleneksel satış ekiplerinin dijital araçlara adaptasyon zorluğu.</li>
+                        <li><b>Ekonomik Dalgalanmalar:</b> Kriz anlarında ilk olarak dijital pazarlama bütçelerinin kesilme riski.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="solutions" class="mb-16 md:mb-24">
+            <div class="text-center mb-12">
+                 <h2 class="text-3xl font-bold mb-3">Dijital Dönüşümün 3 Temel Taşı</h2>
+                 <p class="text-slate-600 max-w-3xl mx-auto">Marka itibarınızı dijitalde zirveye taşımak için birbirini besleyen ve globalde kanıtlanmış üç temel alana odaklanacağız: Modern bir dijital merkez, sarsılmaz bir arama motoru otoritesi ve hedefe yönelik dijital reklamlar.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="card text-center flex flex-col items-center">
+                    <div class="text-5xl mb-4">🌐</div>
+                    <h3 class="text-xl font-bold mb-2">1. Web Sitesi: Dijital Karargahınız</h3>
+                    <p class="text-slate-600 text-sm">Mevcut siteniz, şirketinizin büyüklüğünü yansıtmıyor. B2B alıcılarının %63'ü karar için sitenizi incelerken, yavaş bir site itibarınızı zedeler. Rakibiniz Inter Cars'ın yaptığı gibi modern bir B2B portalı, sadece vitrin değil, 7/24 çalışan bir satış ve operasyon merkezidir.</p>
+                </div>
+                <div class="card text-center flex flex-col items-center">
+                     <div class="text-5xl mb-4">📈</div>
+                    <h3 class="text-xl font-bold mb-2">2. SEO: Sürdürülebilir Otorite</h3>
+                    <p class="text-slate-600 text-sm">Arama motorundan gelen müşteri adaylarının satışa dönme oranı %14.6 gibi çok yüksek bir seviyededir. SEO, reklam bütçesi harcamadan bu nitelikli kitleye ulaşmanızı sağlar. Güçlü SEO, markanızı sektörün dijital referans noktası yapar ve güven inşa eder.</p>
+                </div>
+                <div class="card text-center flex flex-col items-center">
+                     <div class="text-5xl mb-4">🎯</div>
+                    <h3 class="text-xl font-bold mb-2">3. Dijital Reklamlar: Anında Erişim</h3>
+                    <p class="text-slate-600 text-sm">Google Ads, harcanan her 1 TL'ye ortalama 2 TL kazandırır. B2B müşteri adaylarının %80'inin geldiği LinkedIn ise yurtdışı pazarlara açılmak için paha biçilmezdir. Hedefli reklamlar, markanızı anında doğru karar vericilerin önüne çıkarır ve büyümeyi hızlandırır.</p>
+                </div>
+            </div>
+             <div class="card mt-8">
+                <h3 class="font-bold text-xl mb-4 text-center">SEO ile 12 Aylık Tahmini Organik Trafik Büyümesi</h3>
+                <p class="text-sm text-slate-500 text-center mb-4">Stratejik SEO çalışmalarıyla, web sitenizin organik (reklamsız) ziyaretçi sayısını 12 ay içinde katlanarak artırmak hedeflenmektedir. Bu, kalıcı ve sürdürülebilir bir başarıdır.</p>
+                <div class="chart-container">
+                    <canvas id="seoGrowthChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="mb-16 md:mb-24 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-3">12 Aylık Dijital Liderlik Yol Haritası</h2>
+                <p class="text-slate-600 max-w-3xl mx-auto">Adım adım, ölçülebilir hedeflerle dijitaldeki yerinizi sağlamlaştıracak ve liderliğe taşıyacak stratejimiz.</p>
+            </div>
+            <div class="relative pl-8 border-l-2 border-blue-200 max-w-4xl mx-auto">
+                <div class="mb-12 relative timeline-item">
+                    <h3 class="text-xl font-bold text-blue-600 mb-2">İlk 3 Ay: TEMEL ATMA & HIZLI KAZANIMLAR</h3>
+                    <p class="text-slate-600 mb-4 text-sm">Stratejinin temelini oluşturuyor, dijital varlığınızı sağlam bir zemine oturtuyoruz.</p>
+                    <ul class="list-disc list-inside space-y-1 text-slate-700 font-medium text-sm">
+                        <li>Detaylı rakip analizi ve anahtar kelime stratejisi</li>
+                        <li>Teknik SEO altyapısı ve Google My Business optimizasyonu</li>
+                        <li>Profesyonel Sosyal Medya (LinkedIn & Instagram) aktivasyonu</li>
+                        <li>Küçük bütçeli Google & LinkedIn pilot reklam kampanyaları</li>
+                    </ul>
+                </div>
+
+                <div class="mb-12 relative timeline-item">
+                    <h3 class="text-xl font-bold text-blue-600 mb-2">6. Ay: BÜYÜME & İÇERİK ÜRETİMİ</h3>
+                    <p class="text-slate-600 mb-4 text-sm">Görünürlüğünüzü artırıyor, hedef kitlenizle bağ kurmaya başlıyoruz.</p>
+                    <ul class="list-disc list-inside space-y-1 text-slate-700 font-medium text-sm">
+                         <li>Yeni B2B web sitesi için UX/UI tasarım süreçlerinin tamamlanması</li>
+                         <li>İçerik üretimi: "Altay'da Bir Gün" konsepti ve profesyonel video/fotoğraf çekimleri</li>
+                         <li>Marka bilinirliği odaklı, ölçeklendirilmiş Google & LinkedIn reklamları</li>
+                         <li>İlk sektör raporu veya e-kitap içeriğinin yayınlanması</li>
+                    </ul>
+                </div>
+
+                <div class="mb-12 relative timeline-item">
+                    <h3 class="text-xl font-bold text-blue-600 mb-2">9. Ay: DÖNÜŞÜM & HIZLANMA</h3>
+                    <p class="text-slate-600 mb-4 text-sm">Dijitalde vites yükseltiyor, rakiplerle arayı hızla kapatıyoruz.</p>
+                    <ul class="list-disc list-inside space-y-1 text-slate-700 font-medium text-sm">
+                        <li>Yeni B2B web sitesinin yazılım geliştirme sürecinin tamamlanması ve yayına alınması</li>
+                        <li>İlk sektörel influencer veya uzman işbirliği projelerinin hayata geçirilmesi</li>
+                        <li>Veri analizi ile reklam ve SEO kampanyalarının ROI optimizasyonu</li>
+                        <li>Web sitesi formlarının CRM'e entegrasyonu için altyapı çalışması</li>
+                    </ul>
+                </div>
+
+                <div class="relative timeline-item">
+                    <h3 class="text-xl font-bold text-blue-600 mb-2">12. Ay: LİDERLİK & SÜRDÜRÜLEBİLİRLİK</h3>
+                    <p class="text-slate-600 mb-4 text-sm">Dijital arenada liderliği hedefliyor, sürdürülebilir başarıyı garantiliyoruz.</p>
+                    <ul class="list-disc list-inside space-y-1 text-slate-700 font-medium text-sm">
+                        <li>Önemli anahtar kelimelerde arama motorlarında ilk sayfa otoritesi</li>
+                        <li>Tam ölçekli, optimize edilmiş reklam ve içerik pazarlaması ile pazar hakimiyeti</li>
+                        <li>Yıllık performans raporu ve gelecek yıl stratejisinin sunumu</li>
+                        <li>Şirket içi dijital pazarlama yetkinliklerinin artırılması için eğitim ve destek</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-us" class="bg-white rounded-lg shadow-lg p-8 md:p-12 scroll-mt-20">
+            <div class="text-center">
+                 <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Neden <span class="gradient-text">More Dijital?</span></h2>
+                <p class="text-lg text-slate-600 max-w-4xl mx-auto mb-12">Biz, sadece hizmet veren bir ajans değil, sizin dijital dönüşüm ortağınızız. Altay Otomotiv'in hedeflerini anlıyor, veriye dayalı stratejiler, kendi bünyemizdeki prodüksiyon gücümüz ve yaratıcı çözümlerle bu hedeflere ulaşmanızı sağlıyoruz.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center border-b pb-12">
+                <div class="p-4">
+                    <div class="text-5xl font-bold gradient-text">20+</div>
+                    <p class="font-semibold text-lg mt-2">Uzman Ekip</p>
+                    <p class="text-slate-500 text-sm">Stratejist, tasarımcı, yazılımcı ve prodüksiyon uzmanlarından oluşan multidisipliner kadro.</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-5xl font-bold gradient-text">360°</div>
+                    <p class="font-semibold text-lg mt-2">Entegre Hizmet</p>
+                    <p class="text-slate-500 text-sm">Stratejiden prodüksiyona, 3D animasyondan reklama tüm dijital ihtiyaçlarınız tek çatı altında.</p>
+                </div>
+                <div class="p-4">
+                     <div class="text-5xl font-bold gradient-text">1 Saat</div>
+                    <p class="font-semibold text-lg mt-2">Hızlı Reaksiyon</p>
+                    <p class="text-slate-500 text-sm">Acil banner ve kampanya taleplerinize 1 saat içinde geri dönüş yapma çevikliği ve taahhüdü.</p>
+                </div>
+            </div>
+             <div class="mt-12">
+                <h3 class="text-2xl font-bold text-center mb-8">Disiplinli ve Şeffaf İş Akışımız</h3>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-2 text-center text-xs sm:text-sm">
+                    <div class="flex-1 flex flex-col items-center p-2"><div class="bg-slate-100 text-slate-700 rounded-lg w-full h-16 flex items-center justify-center font-bold p-2">Analiz & Strateji</div></div>
+                    <div class="font-bold text-2xl text-slate-300 transform rotate-90 md:rotate-0">&rarr;</div>
+                    <div class="flex-1 flex flex-col items-center p-2"><div class="bg-slate-100 text-slate-700 rounded-lg w-full h-16 flex items-center justify-center font-bold p-2">Tasarım & Üretim</div></div>
+                    <div class="font-bold text-2xl text-slate-300 transform rotate-90 md:rotate-0">&rarr;</div>
+                    <div class="flex-1 flex flex-col items-center p-2"><div class="bg-slate-100 text-slate-700 rounded-lg w-full h-16 flex items-center justify-center font-bold p-2">Uygulama & Yayın</div></div>
+                    <div class="font-bold text-2xl text-slate-300 transform rotate-90 md:rotate-0">&rarr;</div>
+                    <div class="flex-1 flex flex-col items-center p-2"><div class="bg-slate-100 text-slate-700 rounded-lg w-full h-16 flex items-center justify-center font-bold p-2">Ölçümleme & Raporlama</div></div>
+                    <div class="font-bold text-2xl text-slate-300 transform rotate-90 md:rotate-0">&rarr;</div>
+                    <div class="flex-1 flex flex-col items-center p-2"><div class="bg-blue-500 text-white rounded-lg w-full h-16 flex items-center justify-center font-bold p-2">Optimizasyon</div></div>
+                </div>
+                <p class="text-center text-slate-500 mt-6 text-sm">Sürekli iyileştirme prensibiyle çalışır, şeffaf raporlama yapar ve yatırımınızın her kuruşunun karşılığını almanızı garantileriz.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-800 text-white">
+        <div class="container mx-auto px-6 py-10 text-center">
+            <p class="text-2xl font-bold">Dijital Liderlik Yolculuğuna Başlamaya Hazır Mısınız?</p>
+            <p class="mt-2 mb-6 text-slate-400">Altay Otomotiv'in pazar liderliğini dijital dünyaya birlikte taşıyalım.</p>
+            <a href="https://moredijital.com/" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-colors duration-300">Strateji Toplantısı Planlayalım</a>
+            <div class="mt-8 space-y-2">
+                <p class="text-xs text-slate-500">&copy; 2025 <a href="https://moredijital.com" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">More Dijital Ajans</a> & <a href="https://mertdogan.net" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">Mert Doğan</a>. Bu sunum Altay Otomotiv için özel olarak hazırlanmıştır. ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            const wrapLabel = (label, maxLength = 16) => {
+                if (typeof label !== 'string' || label.length <= maxLength) return label;
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + ' ' + word).trim().length > maxLength) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                });
+                if (currentLine) lines.push(currentLine.trim());
+                return lines;
+            };
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                return Array.isArray(label) ? label.join(' ') : label;
+            };
+            
+            Chart.defaults.font.family = "'Inter', sans-serif";
+            Chart.defaults.color = '#334155';
+
+            const commonChartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { padding: 20, font: { size: 12 } } },
+                    tooltip: {
+                        callbacks: { title: tooltipTitleCallback },
+                        bodyFont: { size: 12 },
+                        titleFont: { size: 14, weight: 'bold' },
+                        padding: 10, cornerRadius: 6,
+                        backgroundColor: '#ffffff', titleColor: '#1e293b', bodyColor: '#475569',
+                        borderColor: '#e2e8f0', borderWidth: 1
+                    }
+                }
+            };
+            
+            const colors = { altay: '#3b82f6', martas: '#60a5fa', dinamik: '#93c5fd', basbug: '#bfdbfe', gray: '#cbd5e1' };
+
+            const competitorCtx = document.getElementById('competitorChart');
+            if(competitorCtx) {
+                new Chart(competitorCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Altay Otomotiv', 'Martaş Otomotiv', 'Dinamik Otomotiv', 'Başbuğ Oto'].map(l => wrapLabel(l)),
+                        datasets: [{
+                            label: 'Dijital Varlık Skoru (100)',
+                            data: [15, 90, 80, 55],
+                            backgroundColor: [colors.altay, colors.martas, colors.dinamik, colors.basbug],
+                            borderColor: '#ffffff', borderWidth: 2, borderRadius: 5
+                        }]
+                    },
+                    options: { ...commonChartOptions, scales: { y: { beginAtZero: true, max: 100, grid: { color: '#e2e8f0' } }, x: { grid: { display: false } } }, plugins: { ...commonChartOptions.plugins, legend: { display: false } } }
+                });
+            }
+
+            const trafficCtx = document.getElementById('trafficChart');
+            if(trafficCtx) {
+                new Chart(trafficCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Martaş', 'Dinamik', 'Başbuğ', 'Altay'],
+                        datasets: [{
+                            label: 'Tahmini Aylık Erişim Payı', data: [45, 35, 15, 5],
+                            backgroundColor: [colors.martas, colors.dinamik, colors.basbug, colors.altay],
+                            borderColor: '#f1f5f9', borderWidth: 4, hoverOffset: 8
+                        }]
+                    },
+                    options: { ...commonChartOptions, cutout: '65%' }
+                });
+            }
+
+            const seoGrowthCtx = document.getElementById('seoGrowthChart');
+            if(seoGrowthCtx) {
+                new Chart(seoGrowthCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Başlangıç', '3. Ay', '6. Ay', '9. Ay', '12. Ay'],
+                        datasets: [{
+                            label: 'Aylık Organik Ziyaretçi Sayısı',
+                            data: [5000, 8000, 15000, 28000, 45000],
+                            fill: true, backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                            borderColor: colors.altay, tension: 0.4,
+                            pointBackgroundColor: colors.altay, pointRadius: 5, pointHoverRadius: 8
+                        }]
+                    },
+                    options: { ...commonChartOptions, scales: { y: { beginAtZero: true, grid: { color: '#e2e8f0' } }, x: { grid: { display: false } } }, plugins: { ...commonChartOptions.plugins, legend: { display: false } } }
+                });
+            }
+
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
