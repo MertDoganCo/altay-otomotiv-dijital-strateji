@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodüksiyon Stratejisi | Altay Otomotiv & More Dijital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; }
+        .gradient-text { background: linear-gradient(90deg, #16a34a, #22c55e); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card { background-color: white; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); padding: 1.5rem; }
+        .service-card { background: linear-gradient(135deg, #f8fafc, #e2e8f0); border: 1px solid #cbd5e1; transition: all 0.3s; }
+        .service-card:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
+        .nav-link { transition: color 0.3s, border-color 0.3s; padding-bottom: 4px; border-bottom: 2px solid transparent; }
+        .nav-link:hover { color: #2563eb; border-bottom-color: #93c5fd; }
+        .nav-link-active { color: #2563eb; font-weight: 700; border-bottom-color: #2563eb; }
+        .timeline-item { position: relative; padding-left: 2rem; }
+        .timeline-item::before { content: ''; position: absolute; left: 0; top: 0.5rem; width: 1rem; height: 1rem; background: #22c55e; border-radius: 50%; }
+        .timeline-item::after { content: ''; position: absolute; left: 0.375rem; top: 1.5rem; width: 0.25rem; height: calc(100% - 1rem); background: #d1d5db; }
+        .timeline-item:last-child::after { display: none; }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl font-bold text-slate-800">ALTAY</span>
+                    <span class="text-2xl font-light text-slate-400">+</span>
+                    <span class="text-2xl font-bold" style="background: linear-gradient(90deg, #2563eb, #3b82f6); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">MORE</span>
+                </div>
+                <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-600">
+                    <a href="home.html" class="nav-link">Portföy</a>
+                    <a href="index.html" class="nav-link">Ana Strateji</a>
+                    <a href="website.html" class="nav-link">Web Sitesi</a>
+                    <a href="seo.html" class="nav-link">SEO</a>
+                    <a href="sosyalmedya.html" class="nav-link">Sosyal Medya</a>
+                    <a href="produksiyon.html" class="nav-link nav-link-active">Prodüksiyon</a>
+                    <a href="referanslar.html" class="nav-link">Referanslarımız</a>
+                    <a href="teksayfa.html" class="nav-link">Tek Sayfa</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <section class="py-12">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Yaratıcı İçerik Prodüksiyonu: <span class="gradient-text">Altay Otomotiv'in Görsel Hikayesi</span></h1>
+                <p class="text-lg text-slate-600">Dijital pazarlama dünyasında içerik kral, prodüksiyon ise kraliçedir. En güçlü strateji bile kaliteli görsel ve video içerikler olmadan etkisiz kalır. B2B sektöründe müşteriler artık sadece teknik spesifikasyonlar değil, güvenilirlik hissi veren, profesyonel ve etkileyici sunumlar bekliyor. Altay Otomotiv'in 40+ yıllık deneyimi ve güçlü altyapısını, modern dijital içerik prodüksiyonu ile buluşturarak sektördeki liderliğinizi görsel olarak da pekiştireceğiz.</p>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div class="service-card p-6 rounded-lg">
+                <div class="text-4xl mb-4 text-center">📹</div>
+                <h3 class="text-xl font-bold mb-2 text-center">Video Prodüksiyon</h3>
+                <p class="text-slate-600 text-center">Kurumsal tanıtım, ürün videoları, teknik eğitim içerikleri ve behind-the-scenes çekimleri.</p>
+            </div>
+            <div class="service-card p-6 rounded-lg">
+                <div class="text-4xl mb-4 text-center">📸</div>
+                <h3 class="text-xl font-bold mb-2 text-center">Fotoğraf Çekimi</h3>
+                <p class="text-slate-600 text-center">Ürün fotoğrafları, kurumsal portreler, mekan çekimleri ve etkinlik fotoğrafçılığı.</p>
+            </div>
+            <div class="service-card p-6 rounded-lg">
+                <div class="text-4xl mb-4 text-center">🎨</div>
+                <h3 class="text-xl font-bold mb-2 text-center">Grafik Tasarım</h3>
+                <p class="text-slate-600 text-center">Sosyal medya görselleri, kataloglar, broşürler ve dijital reklamlar için yaratıcı tasarımlar.</p>
+            </div>
+            <div class="service-card p-6 rounded-lg">
+                <div class="text-4xl mb-4 text-center">✨</div>
+                <h3 class="text-xl font-bold mb-2 text-center">Post-Prodüksiyon</h3>
+                <p class="text-slate-600 text-center">Video editing, renk düzeltme, ses mixing ve motion graphics uygulamaları.</p>
+            </div>
+        </section>
+
+        <!-- Strategic Content Production Strategy -->
+        <section class="mb-16 md:mb-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-3">🎬 İçerik Motoru: Otorite ve Güven Tesis Etmek</h2>
+                <p class="text-slate-600 max-w-3xl mx-auto">Marka kimliğini dijitalde inşa etmenin yolu: "Satış" değil "Bilgilendirme" ve "Güven Oluşturma"</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <div class="card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                            <span class="text-2xl">🎯</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-purple-600">Fuar = İçerik Üretim Merkezi</h3>
+                    </div>
+                    <p class="text-slate-600 mb-4">Automechanika gibi fuarları <strong>satış aktivitesi değil, içerik fabrikası</strong> olarak kullanın:</p>
+                    <ul class="text-sm text-slate-600 space-y-2">
+                        <li>• <strong>Profesyonel Stant Turları:</strong> Global sahnenin aktif oyuncusu imajı</li>
+                        <li>• <strong>Ürün Lansmanları:</strong> Yenilik lideri konumlandırması</li>
+                        <li>• <strong>Uzman Röportajları:</strong> Sektör otoritesi algısı</li>
+                        <li>• <strong>Uluslararası İş Ortakları:</strong> Global vizyon somutlaştırma</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                            <span class="text-2xl">👥</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-600">"Altay Uzmanlarıyla Tanışın"</h3>
+                    </div>
+                    <p class="text-slate-600 mb-4"><strong>Markayı insanileştiren</strong> çalışan odaklı video serisi:</p>
+                    <ul class="text-sm text-slate-600 space-y-2">
+                        <li>• <strong>Kalite Kontrol Başkanı:</strong> Test prosedürlerini anlatıyor</li>
+                        <li>• <strong>Baş Mühendis:</strong> Malzeme bilimi tartışıyor</li>
+                        <li>• <strong>Lojistik Yöneticisi:</strong> Tedarik zinciri incelikleri</li>
+                        <li>• <strong>Sonuç:</strong> Yüzü olmayan şirketten → Uzman ekip algısı</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <div class="card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                            <span class="text-2xl">🏭</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-green-600">Şeffaflık = Güvenilirlik</h3>
+                    </div>
+                    <p class="text-slate-600 mb-4"><strong>"Sahne Arkası" içeriklerle kaliteyi kanıtlayın:</strong></p>
+                    <ul class="text-sm text-slate-600 space-y-2">
+                        <li>• <strong>Fabrika Turu:</strong> B2B'nin en temel endişesi = Kalite</li>
+                        <li>• <strong>Teknoloji Yatırımları:</strong> Rekabet avantajını sergileyin</li>
+                        <li>• <strong>Kalite Kontrol:</strong> Titiz süreçleri gösterin</li>
+                        <li>• <strong>Hedef:</strong> Uluslararası pazarlarda güven artırıcı</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
+                            <span class="text-2xl">📚</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-orange-600">Teknik Kaynak Kütüphanesi</h3>
+                    </div>
+                    <p class="text-slate-600 mb-4"><strong>Delphi & Bosch modeli:</strong> Değerli dijital kütüphane</p>
+                    <ul class="text-sm text-slate-600 space-y-2">
+                        <li>• <strong>Teknik Veri Föyleri:</strong> İndirilebilir PDF'ler</li>
+                        <li>• <strong>Montaj Kılavuzları:</strong> Video + yazılı format</li>
+                        <li>• <strong>Ürün Karşılaştırmaları:</strong> Bilinçli karar desteği</li>
+                        <li>• <strong>SEO Değeri:</strong> "Evergreen" içerik avantajı</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-6">
+                <div class="flex items-start">
+                    <div class="text-2xl mr-4">💡</div>
+                    <div>
+                        <h4 class="font-bold text-indigo-800 mb-2">İçerik Stratejisi Felsefesi</h4>
+                        <p class="text-indigo-700 text-sm mb-3">İletişimi "satış" odaklı olmaktan çıkarıp <strong>"yetkinleştirme" odaklı</strong> yapıya dönüştürün:</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white rounded-lg p-3">
+                                <div class="text-red-500 font-bold text-sm mb-1">❌ ESKİ YAKLAŞIM</div>
+                                <div class="text-xs text-slate-600">"Ürünümüzü satın alın"</div>
+                            </div>
+                            <div class="bg-white rounded-lg p-3">
+                                <div class="text-green-500 font-bold text-sm mb-1">✅ YENİ YAKLAŞIM</div>
+                                <div class="text-xs text-slate-600">"İşinizi daha iyi yapmanıza yardımcı olalım"</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white p-8 rounded-lg shadow-lg mb-12">
+            <h2 class="text-3xl font-bold mb-8 text-center">Altay Otomotiv İçin Özel Prodüksiyon Planı</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-600">🎬 Video İçerik Stratejisi</h3>
+                    <ul class="space-y-3 text-slate-600">
+                        <li><strong>Kurumsal Tanıtım Filmi (3-5 dk):</strong> Altay Otomotiv'in hikayesi, değerleri ve vizyonunu anlatan sinematik prodüksiyon</li>
+                        <li><strong>Ürün Showcase Videoları:</strong> Her ana kategori için profesyonel ürün tanıtım videoları</li>
+                        <li><strong>Teknik Eğitim Serisi:</strong> "Nasıl yapılır?" video serileri - montaj, bakım, troubleshooting</li>
+                        <li><strong>Behind-the-Scenes İçerikler:</strong> Depo operasyonları, kalite kontrol, günlük iş akışları</li>
+                        <li><strong>Müşteri Testimonialleri:</strong> Memnun müşterilerle röportaj formatında güven artırıcı içerikler</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-green-600">📊 Görsel İçerik Yapısı</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Video İçerik</span>
+                                <span class="text-sm font-medium">40%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 40%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Fotoğraf</span>
+                                <span class="text-sm font-medium">30%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full" style="width: 30%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Grafik Tasarım</span>
+                                <span class="text-sm font-medium">20%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 20%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Motion Graphics</span>
+                                <span class="text-sm font-medium">10%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-orange-600 h-2 rounded-full" style="width: 10%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-slate-50 to-slate-100 p-6 rounded-lg">
+                <h3 class="text-2xl font-bold mb-6 text-center text-slate-800">12 Aylık Prodüksiyon Takvimi</h3>
+                <div class="space-y-4">
+                    <div class="timeline-item">
+                        <h4 class="font-bold text-blue-600">1-3. Aylar - Temel İçerik Prodüksiyonu</h4>
+                        <p class="text-slate-600 mt-1">Kurumsal tanıtım filmi çekimi, ürün fotoğraf seansları, katalog çekimleri ve sosyal medya içerik bankası oluşturma</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4 class="font-bold text-green-600">4-6. Aylar - Teknik İçerik Geliştirme</h4>
+                        <p class="text-slate-600 mt-1">Nasıl yapılır video serileri, ürün karşılaştırma içerikleri, müşteri testimonial çekimleri</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4 class="font-bold text-purple-600">7-9. Aylar - Hikaye Anlatımı</h4>
+                        <p class="text-slate-600 mt-1">Behind-the-scenes belgeseli, çalışan profilleri, şirket kültürü videolarına odaklanma</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4 class="font-bold text-orange-600">10-12. Aylar - İleri Seviye Prodüksiyon</h4>
+                        <p class="text-slate-600 mt-1">360° fabrika turu, AR/VR deneyimler, interaktif ürün katalogları ve yıl sonu kurumsal filmi</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">Prodüksiyon Değeri ve ROI</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="text-4xl font-bold mb-2">%85</div>
+                    <p class="text-blue-100">Video içerikli paylaşımlar, sadece metin paylaşımlarından %85 daha fazla organik erişim sağlar.</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold mb-2">10x</div>
+                    <p class="text-blue-100">Kaliteli ürün fotoğrafları, e-ticaret dönüşüm oranlarını 10 kata kadar artırabilir.</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold mb-2">%200</div>
+                    <p class="text-blue-100">Video içerikli web siteleri, ziyaretçi etkileşiminde %200'e varan artış gösterir.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold mb-6 text-center">Prodüksiyon Hizmetlerimiz ve Teknik Özellikler</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="border border-slate-200 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-blue-600">🎥 Video Prodüksiyon</h3>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• 4K ultra HD kalitede çekim</li>
+                        <li>• Drone çekimleri ve hava fotoğrafçılığı</li>
+                        <li>• Profesyonel ses kayıt sistemi</li>
+                        <li>• Motion graphics ve animasyon</li>
+                        <li>• Canlı yayın desteği</li>
+                    </ul>
+                </div>
+                <div class="border border-slate-200 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-green-600">📷 Fotoğraf Hizmetleri</h3>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• High-resolution ürün fotoğrafçılığı</li>
+                        <li>• 360° ürün görüntüleme</li>
+                        <li>• Stüdyo ve lokasyon çekimleri</li>
+                        <li>• Endüstriyel fotoğrafçılık</li>
+                        <li>• Lifestyle ve kullanım çekimleri</li>
+                    </ul>
+                </div>
+                <div class="border border-slate-200 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-purple-600">🎨 Tasarım Hizmetleri</h3>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• Sosyal medya görsel tasarımları</li>
+                        <li>• Katalog ve broşür tasarımı</li>
+                        <li>• İnfografik ve data visualization</li>
+                        <li>• Banner ve display reklamları</li>
+                        <li>• Marka kimliği ve logo tasarımı</li>
+                    </ul>
+                </div>
+                <div class="border border-slate-200 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-orange-600">⚙️ Post-Prodüksiyon</h3>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• Video editing ve montaj</li>
+                        <li>• Renk düzeltme ve grading</li>
+                        <li>• Ses mixing ve mastering</li>
+                        <li>• Visual effects (VFX)</li>
+                        <li>• Format optimizasyonu</li>
+                    </ul>
+                </div>
+                <div class="border border-slate-200 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-red-600">📱 İçerik Optimizasyonu</h3>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• Platform özelinde format düzenlemesi</li>
+                        <li>• Mobil optimizasyon</li>
+                        <li>• SEO dostu görsel optimizasyonu</li>
+                        <li>• Loading hızı optimizasyonu</li>
+                        <li>• A/B test materyalleri</li>
+                    </ul>
+                </div>
+                <div class="border border-slate-200 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-indigo-600">🔄 İçerik Yönetimi</h3>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• Digital asset management</li>
+                        <li>• İçerik bankası oluşturma</li>
+                        <li>• Versiyon kontrol sistemi</li>
+                        <li>• Kullanım hakları yönetimi</li>
+                        <li>• Arşivleme ve kataloglama</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-10 text-center">
+             <p class="text-2xl font-bold">Hikayenizi Görsellerle Anlatmanın Zamanı</p>
+             <p class="mt-2 mb-6 text-slate-400">Profesyonel prodüksiyon ile Altay Otomotiv'i sektörün görsel lideri yapalım.</p>
+             <a href="https://moredijital.com/" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-colors duration-300">Prodüksiyon Sürecini Başlatalım</a>
+             <div class="mt-8 space-y-2">
+                 <p class="text-xs text-slate-500">&copy; 2025 <a href="https://moredijital.com" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">More Dijital Ajans</a> & <a href="https://mertdogan.net" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">Mert Doğan</a>. Bu sunum Altay Otomotiv için özel olarak hazırlanmıştır. ❤️</p>
+             </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sosyal Medya Stratejisi | Altay Otomotiv & More Dijital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; }
+        .gradient-text { background: linear-gradient(90deg, #16a34a, #22c55e); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card { background-color: white; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); padding: 1.5rem; }
+        .platform-card { background: linear-gradient(135deg, #f8fafc, #e2e8f0); border: 1px solid #cbd5e1; transition: all 0.3s; }
+        .platform-card:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
+        .nav-link { transition: color 0.3s, border-color 0.3s; padding-bottom: 4px; border-bottom: 2px solid transparent; }
+        .nav-link:hover { color: #2563eb; border-bottom-color: #93c5fd; }
+        .nav-link-active { color: #2563eb; font-weight: 700; border-bottom-color: #2563eb; }
+        .social-icon { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl font-bold text-slate-800">ALTAY</span>
+                    <span class="text-2xl font-light text-slate-400">+</span>
+                    <span class="text-2xl font-bold" style="background: linear-gradient(90deg, #2563eb, #3b82f6); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">MORE</span>
+                </div>
+                <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-600">
+                    <a href="home.html" class="nav-link">Portföy</a>
+                    <a href="index.html" class="nav-link">Ana Strateji</a>
+                    <a href="website.html" class="nav-link">Web Sitesi</a>
+                    <a href="seo.html" class="nav-link">SEO</a>
+                    <a href="sosyalmedya.html" class="nav-link nav-link-active">Sosyal Medya</a>
+                    <a href="produksiyon.html" class="nav-link">Prodüksiyon</a>
+                    <a href="referanslar.html" class="nav-link">Referanslarımız</a>
+                    <a href="teksayfa.html" class="nav-link">Tek Sayfa</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <section class="py-12">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Sosyal Medyada Güçlü Varlık: <span class="gradient-text">Altay Otomotiv'in Dijital Topluluğu</span></h1>
+                <p class="text-lg text-slate-600">Sosyal medya, B2B sektöründe artık sadece "var olmak" için değil, güven inşa etmek, sektörel liderlik göstermek ve yeni iş fırsatları yaratmak için kullanılmaktadır. LinkedIn'de bir distribütörle tanışmak, Instagram'da ürün videolarınızı izleyen potansiyel müşteri ile iletişim kurmak veya YouTube'da paylaştığınız teknik eğitim videosu ile sektörde otorite kazanmak - bunların hepsi bugünün B2B pazarlama gerçekleridir.</p>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div class="platform-card p-6 rounded-lg">
+                <div class="social-icon mx-auto mb-4" style="background-color: #0077B5;">📈</div>
+                <h3 class="text-xl font-bold mb-2 text-center">LinkedIn</h3>
+                <p class="text-slate-600 text-center">B2B networking ve sektörel liderlik. Decision maker'larla doğrudan bağlantı kurma platformu.</p>
+            </div>
+            <div class="platform-card p-6 rounded-lg">
+                <div class="social-icon mx-auto mb-4" style="background-color: #FF0000;">🎥</div>
+                <h3 class="text-xl font-bold mb-2 text-center">YouTube</h3>
+                <p class="text-slate-600 text-center">Teknik eğitim videoları, ürün tanıtımları ve şirket kültürü. Uzun vadeli SEO desteği.</p>
+            </div>
+            <div class="platform-card p-6 rounded-lg">
+                <div class="social-icon mx-auto mb-4" style="background-color: #E4405F;">📸</div>
+                <h3 class="text-xl font-bold mb-2 text-center">Instagram</h3>
+                <p class="text-slate-600 text-center">Görsel hikaye anlatımı, behind-the-scenes içerikler ve marka kişiliği oluşturma.</p>
+            </div>
+            <div class="platform-card p-6 rounded-lg">
+                <div class="social-icon mx-auto mb-4" style="background-color: #25D366;">💬</div>
+                <h3 class="text-xl font-bold mb-2 text-center">WhatsApp Business</h3>
+                <p class="text-slate-600 text-center">Anında müşteri iletişimi, katalog paylaşımı ve sipariş takibi.</p>
+            </div>
+        </section>
+
+        <!-- Global Influencer Strategy -->
+        <section class="mb-16 md:mb-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-3">🌍 Uluslararası Influencer Pazarlama: Güvenilirlik Transfer Stratejisi</h2>
+                <p class="text-slate-600 max-w-3xl mx-auto">Sıfırdan güven inşa etmek yerine, mevcut güven ağlarından yararlanarak uluslararası pazarlara organik giriş</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4 text-blue-600">🎯 Hedef Profil: Teknik Otorite</h3>
+                    <p class="text-slate-600 mb-4">Lüks araba sergileyen "influencer" değil - <strong>saygın teknisyen ve atölye sahipleri:</strong></p>
+                    <div class="space-y-3">
+                        <div class="bg-gray-50 p-3 rounded-lg">
+                            <h4 class="font-bold text-sm">Scotty Kilmer (ABD)</h4>
+                            <p class="text-xs text-slate-600">5.9M takipçi • Bağımsız teknisyen • YouTube'un en güvenilir otomotiv kanalı</p>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded-lg">
+                            <h4 class="font-bold text-sm">ChrisFix (ABD)</h4>
+                            <p class="text-xs text-slate-600">9.2M takipçi • DIY tamirciler için rehber • Tamir videoları uzmanı</p>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded-lg">
+                            <h4 class="font-bold text-sm">HumbleMechanic (Almanya)</h4>
+                            <p class="text-xs text-slate-600">578K takipçi • VW/Audi uzmanı • Profesyonel teknisyen</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4 text-green-600">🤝 İş Birliği Modeli</h3>
+                    <p class="text-slate-600 mb-4"><strong>Reklam değil - otantik ortaklık:</strong></p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 mt-1">
+                                <span class="text-green-600 text-sm font-bold">1</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm">Türkiye'ye Davet</h4>
+                                <p class="text-xs text-slate-600">Tüm masraflar karşılanarak fabrika ziyareti</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 mt-1">
+                                <span class="text-green-600 text-sm font-bold">2</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm">Şeffaf İnceleme</h4>
+                                <p class="text-xs text-slate-600">Sınırsız fabrika turu + mühendislerle soru-cevap</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 mt-1">
+                                <span class="text-green-600 text-sm font-bold">3</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm">Özgün İçerik</h4>
+                                <p class="text-xs text-slate-600">Kendi kitlesi için deneyimi belgeleme</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-xl p-6">
+                <div class="flex items-start">
+                    <div class="text-2xl mr-4">⚡</div>
+                    <div>
+                        <h4 class="font-bold text-blue-800 mb-2">Güven Transfer Etkisi</h4>
+                        <p class="text-blue-700 text-sm mb-3">Almanya'daki bir B2B alıcısı, 5 yıldır takip ettiği güvenilir teknisyenin olumlu incelemesini gördüğünde:</p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                            <div class="bg-white rounded-lg p-3">
+                                <div class="text-xl font-bold text-blue-600">+340%</div>
+                                <div class="text-xs text-slate-600">Marka güvenilirlik artışı</div>
+                            </div>
+                            <div class="bg-white rounded-lg p-3">
+                                <div class="text-xl font-bold text-green-600">-85%</div>
+                                <div class="text-xs text-slate-600">Satın alma tereddüdü</div>
+                            </div>
+                            <div class="bg-white rounded-lg p-3">
+                                <div class="text-xl font-bold text-purple-600">7x</div>
+                                <div class="text-xs text-slate-600">Geleneksel reklama göre etki</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white p-8 rounded-lg shadow-lg mb-12">
+            <h2 class="text-3xl font-bold mb-8 text-center">Altay Otomotiv Sosyal Medya Stratejisi ve İçerik Planı</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-600">🎯 Hedef Kitle Analizi</h3>
+                    <ul class="space-y-2 text-slate-600">
+                        <li><strong>Birincil:</strong> Sanayi işletmeleri, filo yöneticileri, teknisyenler</li>
+                        <li><strong>İkincil:</strong> Distribütörler, yetkili servisler, yedek parça bayileri</li>
+                        <li><strong>Üçüncül:</strong> OEM üreticiler, ihracat müşterileri</li>
+                        <li><strong>Demografik:</strong> 25-55 yaş, erkek ağırlıklı, lise-üniversite mezunu</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-green-600">📊 İçerik Stratejisi (%)</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span>Teknik/Eğitici İçerik</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 35%"></div>
+                            </div>
+                            <span class="text-sm font-bold">35%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Ürün Tanıtımları</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full" style="width: 25%"></div>
+                            </div>
+                            <span class="text-sm font-bold">25%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Şirket Kültürü</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 20%"></div>
+                            </div>
+                            <span class="text-sm font-bold">20%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Sektör Haberleri</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-orange-600 h-2 rounded-full" style="width: 20%"></div>
+                            </div>
+                            <span class="text-sm font-bold">20%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-slate-50 to-slate-100 p-6 rounded-lg">
+                <h3 class="text-2xl font-bold mb-4 text-center text-slate-800">Haftalık İçerik Takvimi</h3>
+                <div class="grid grid-cols-1 md:grid-cols-7 gap-4 text-sm">
+                    <div class="bg-white p-3 rounded-lg text-center">
+                        <div class="font-bold text-blue-600 mb-2">PAZARTESİ</div>
+                        <div class="text-xs text-slate-600">#MotivasyonPazartesi<br>Ekip fotoğrafları<br>Haftalık hedefler</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg text-center">
+                        <div class="font-bold text-green-600 mb-2">SALI</div>
+                        <div class="text-xs text-slate-600">#TeknikSalı<br>Ürün detayları<br>Teknik spesifikasyonlar</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg text-center">
+                        <div class="font-bold text-purple-600 mb-2">ÇARŞAMBA</div>
+                        <div class="text-xs text-slate-600">#WisdomWednesday<br>Sektör ipuçları<br>Müşteri hikayeleri</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg text-center">
+                        <div class="font-bold text-orange-600 mb-2">PERŞEMBE</div>
+                        <div class="text-xs text-slate-600">#ThrowbackThursday<br>Şirket tarihçesi<br>Milestone'lar</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg text-center">
+                        <div class="font-bold text-red-600 mb-2">CUMA</div>
+                        <div class="text-xs text-slate-600">#FeatureFriday<br>Ürün spotlight<br>Yenilikler</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg text-center">
+                        <div class="font-bold text-indigo-600 mb-2">CUMARTESİ</div>
+                        <div class="text-xs text-slate-600">#SaturdaySpotlight<br>Müşteri başarıları<br>Referanslar</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg text-center">
+                        <div class="font-bold text-pink-600 mb-2">PAZAR</div>
+                        <div class="text-xs text-slate-600">#SundayStory<br>Behind the scenes<br>Ekip aktiviteleri</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">Sosyal Medya ROI ve Beklenen Sonuçlar</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="text-4xl font-bold mb-2">3-6 ay</div>
+                    <p class="text-blue-100">İlk 3-6 ayda marka bilinirliğinde %200+ artış ve organik takipçi kazanımı.</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold mb-2">12 ay</div>
+                    <p class="text-blue-100">Yıl sonunda sosyal medya kaynaklı lead'lerin toplam satışlara katkısı %15-25.</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold mb-2">24/7</div>
+                    <p class="text-blue-100">WhatsApp Business ile kesintisiz müşteri hizmetleri ve hızlı sipariş alma.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold mb-6 text-center">İçerik Örnekleri ve Gönderi Tipleri</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="border border-slate-200 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-blue-600">📚 Teknik Eğitim</h3>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• "Fren balata değişimi nasıl yapılır?" video serisi</li>
+                        <li>• Lastik bakım ipuçları infografikleri</li>
+                        <li>• Motor yağı seçim rehberi</li>
+                        <li>• Kış bakım kontrol listesi</li>
+                    </ul>
+                </div>
+                <div class="border border-slate-200 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-green-600">🏭 Behind The Scenes</h3>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• Depo ve lojistik operasyonları</li>
+                        <li>• Kalite kontrol süreçleri</li>
+                        <li>• Ekip tanıtımları ve uzman profilleri</li>
+                        <li>• Yeni ürün paketleme süreçleri</li>
+                    </ul>
+                </div>
+                <div class="border border-slate-200 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-purple-600">📈 Başarı Hikayeleri</h3>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• Müşteri testimonialları</li>
+                        <li>• Büyük projelerin before/after'ları</li>
+                        <li>• İhracat başarı hikayeleri</li>
+                        <li>• Distribütör ortaklık duyuruları</li>
+                    </ul>
+                </div>
+                <div class="border border-slate-200 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-orange-600">🔧 Ürün Spotlights</h3>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• Yeni ürün lansmanları</li>
+                        <li>• Ürün karşılaştırma tabloları</li>
+                        <li>• OEM vs Aftermarket analizleri</li>
+                        <li>• Fiyat/performans değerlendirmeleri</li>
+                    </ul>
+                </div>
+                <div class="border border-slate-200 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-red-600">📰 Sektör İçerikleri</h3>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• Otomotiv sektörü trend analizleri</li>
+                        <li>• Ekonomik gelişmelerin sektöre etkisi</li>
+                        <li>• Fuar ve etkinlik haberleri</li>
+                        <li>• Teknolojik yenilikler ve E-mobility</li>
+                    </ul>
+                </div>
+                <div class="border border-slate-200 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-indigo-600">🎉 Etkileşim İçerikleri</h3>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• Anketler ve quiz'ler</li>
+                        <li>• "Bu parça hangi araca ait?" oyunları</li>
+                        <li>• Tahmin yarışmaları</li>
+                        <li>• User-generated content kampanyaları</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-10 text-center">
+             <p class="text-2xl font-bold">Sosyal Medyada Güçlü Bir Topluluk Yaratmanın Zamanı</p>
+             <p class="mt-2 mb-6 text-slate-400">Altay Otomotiv'i dijital dünyada sektörün lideri yapalım.</p>
+             <a href="https://moredijital.com/" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-colors duration-300">Sosyal Medya Yolculuğuna Başlayalım</a>
+             <div class="mt-8 space-y-2">
+                 <p class="text-xs text-slate-500">&copy; 2025 <a href="https://moredijital.com" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">More Dijital Ajans</a> & <a href="https://mertdogan.net" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">Mert Doğan</a>. Bu sunum Altay Otomotiv için özel olarak hazırlanmıştır. ❤️</p>
+             </div>
+        </div>
+    </footer>
+</body>
+</html>
